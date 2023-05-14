@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+
+:root{
+    --rosa: #fdedf2;
+    --rosaEscuro: #a74967;
+    --roxo: #41337a;
+    --verdeClaro:#91D9E2 ;
+    --verde:#43919c;
+}
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear; 
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+body {
+    background-image: url("../assets/img/imgBack.jpg");
+
+  }
+
+header a button{
+    border-style: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    background-color: var(--roxo);
+    padding: 1rem 2rem ;
+    margin: 1rem;
+    font-family: 'Comfortaa';
+    font-size: 1.2rem;
+    color: var(--verdeClaro);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);    
+}
+
+header a button img{
+    width: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+header a button:hover  {
+    border-style: solid;
+    border-color: var(--roxo);
+    background-color: var(--verde);
+}
+
+/* formulario cadastro */
+.container .form{
+    border-radius: 5px;
+    height: fit-content;
+    width: fit-content;
+    background-color: rgba(65, 51, 122, 0.9);
+    margin: 5rem;
+    padding: 2rem ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
+}
+
+.container .form .logo{
+    display: flex;
+    align-items: center;
+    font-family: 'Sacramento';
+    font-size: 3rem;
+    color: var(--verdeClaro);
+}
+.container .form .logo img{
+    width: 5rem;
+}
+
+
+.container .form .titulo{
+    font-family: 'Comfortaa';
+    font-size: 2rem;
+    color: var(--verdeClaro);
+    margin-bottom: 1rem;    
+}
+
+.container .form .dados{
+    font-family: 'Comfortaa';
+    color: var(--verdeClaro);
+    margin: 0.5em;
+}
+

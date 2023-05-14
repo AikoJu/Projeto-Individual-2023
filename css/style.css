@@ -23,6 +23,8 @@ html{
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
     overflow-x: hidden;
+}
+body{
     background-color: var(--rosa);
 }
 
@@ -38,6 +40,8 @@ header{
 }
 
 header .logo{
+    display: flex;
+    align-items: center;
     font-size:  4rem;
     color: var(--verdeClaro);
     font-family: 'Sacramento';
@@ -69,9 +73,7 @@ header .navbar a:hover{
  /* fim da header */
 
 
-.home{
-    
-}
+
 
 
 
