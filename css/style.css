@@ -47,13 +47,14 @@ header .logo{
     font-family: 'Sacramento';
 }
 
-.navbar {
+.navbar{
     display: flex;
     list-style: none;
     align-items:center ;
     justify-content:space-around;
     cursor: pointer;
 }
+
 .navbar li a{
     font-size: 2rem;
     font-family: 'Comfortaa';
