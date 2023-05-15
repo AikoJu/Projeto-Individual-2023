@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Sacramento');
 @import url('https://fonts.googleapis.com/css?family=Comfortaa');
 
-
 :root{
     --rosa: #f0b4c7;
     --rosaEscuro: #a74967;
@@ -56,6 +55,10 @@ body {
     color: var(--rosa);
     background-color: var(--verde);
 }
+
+
+
+
 .container{
     display: flex;
     justify-content: center;
@@ -67,44 +70,56 @@ body {
     border-radius: 5px;
     height: fit-content;
     width: 45%;
-    background-color: rgba(65, 51, 122, 0.9);
+    background-color: rgba(65, 51, 122, .93);
     margin: 2rem;
     margin-top: 0 ;
-    padding: 2rem ;
+    padding: 1rem ;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
 }
 
-.container .form .logo{
+.container .form .costura {
+    border-style: dashed;
+    border-color: var(--rosa);
+    height: fit-content;
+    width: 70%;
+    margin: 2rem;
+    padding: 1rem ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo{
     display: flex;
     align-items: center;
     font-family: 'Sacramento';
-    font-size: 2.5rem;
+    font-size: 4rem;
     color: var(--verdeClaro);
-    margin-bottom: 0;
+   margin-top: 1rem;
 }
-.container .form .logo img{
+.logo img{
     width: 5rem;
 }
 
 
-.container .form .costura .titulo{
+.titulo{
     font-family: 'Comfortaa';
     font-size: 2rem;
     color: var(--rosa);
     margin-bottom: 0.5rem;    
 }
 
-.container .form .costura .dados{
+.dados{
     font-family: 'Comfortaa';
     font-size: 1.5rem;
     color: var(--rosa);
     margin: 0.3em;
 }
 
-.container .form .costura input{
+.costura input{
     width: 25rem;
     height: 2rem;
     font-size: 1.2rem;
@@ -113,8 +128,7 @@ body {
     margin-bottom: 1rem;
 }
 
-
-.container .form .costura select{
+ .costura select{
     width: 25rem;
     height: 2rem;
     font-size: 1.2rem;
@@ -123,11 +137,7 @@ body {
     text-align:center;
     margin-bottom: 1rem;
 }
-.container .costura{
-    border-style: dashed;
-    border-color: var(--rosa);
-    padding: 2rem;
-}
+
 
 button{
     padding: 0.5rem;
@@ -144,4 +154,3 @@ button:hover{
     color: var(--rosaEscuro);
     cursor: pointer;
 }
-

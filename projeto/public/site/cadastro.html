@@ -6,31 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/img/image-removebg-preview.png">
     <link rel="stylesheet" href="../css/cadastro.css">
+    <script src="../js/cadastro.js"></script>
+    <script src="./js/funcoes.js"></script>
     <title>Crochetando... | Cadastro</title>
 </head>
 <body>
         <a href="index.html"><button class="voltar" >Voltar a home <img src="../assets/img/image-removebg-preview.png"></button> </a>
+
     
     <div class="container">
         <div class="form">
-            <div class="costura">
             <p class="logo">Crochetando...<img src="../assets/img/image-removebg-preview.png" ></p>
+            <div class="costura">
+            
             <p class="titulo">CADASTRO</p>
-            <p class="dados">Nome </p>
-            <input id="inputNome">
-            <p class="dados">E-mail</p>
-            <input id="inputEmail">
+            
+            <p class="dados">Nome</p>
+            <input id="inputNome" placeholder="Seu Nome">
+            
+            <p class="dados" >E-mail</p>
+            <input id="inputEmail" placeholder="email@email.com">
+            
             <p class="dados">Nível</p>
             <select class="select" id="selectNivel">
                 <option value="iniciante">Iniciante</option>
                 <option value="intermediario">Intermediária(o)</option>
                 <option value="experiente">Experiente</option>
             </select>
+            
             <p class="dados">Senha</p>
-            <input id="inputSenha"> 
+            <input id="inputSenha" placeholder="******" type="password">  
+            
             <p class="dados">Confirme a senha</p>
-            <input id="inputSenha">
-            <button>
+            <input id="inputSenhaConfirmacao" placeholder="******" type="password">
+            <button onclick="cadastrar()">
                 Cadastrar
             </button>
             </div>
@@ -40,3 +49,5 @@
     
 </body>
 </html>
+<script>
+    
