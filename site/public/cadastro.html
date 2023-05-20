@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/image-removebg-preview.png">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <script src="js/funcoes.js"></script>
+    
+
+    <title>Crochetando... | Cadastro</title>
+</head>
+<body>
+    <div class="inicio">
+        <a href="index.html"><button class="voltar" >Voltar a home <img src="assets/img/image-removebg-preview.png"></button> </a>
+        <div class="divMensagem" id="divMensagem"></div>
+    </div>
+    
+    <div class="container">
+        <div class="form">
+            <p class="logo">Crochetando...<img src="assets/img/image-removebg-preview.png" ></p>
+            <div class="costura">
+            
+            <p class="titulo">CADASTRO</p>
+            
+            <p class="dados">Nome</p>
+            <input id="inputNome" placeholder="Seu Nome">
+            
+            <p class="dados" >E-mail</p>
+            <input id="inputEmail" placeholder="email@email.com">
+            <span class="spanMgsErro"></span>
+
+            <p class="dados">Nível</p>
+            <select class="select" id="selectNivel">
+                <option value="iniciante">Iniciante</option>
+                <option value="intermediario">Intermediária(o)</option>
+                <option value="experiente">Experiente</option>
+            </select>
+            
+            <p class="dados">Senha</p>
+            <input id="inputSenha" placeholder="Minímo de 6 digitos!" type="password">  
+            <span class="spanMgsErro" ></span>
+
+            <p class="dados">Confirme a senha</p>
+            <input id="inputSenhaConfirmacao" placeholder="******" type="password">
+            <span class="spanMgsErro"></span>
+
+            <button onclick="cadastrar()">
+                Cadastrar
+            </button>
+            <div class = "divAguardar" id="div_aguardar"   ><img src="assets/img/loading.gif"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+function cadastrar() {
+    aguardar();
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var nomeVar = inputNome.value;
+    var emailVar = inputEmail.value;
+    var nivelVar = selectNivel.value;
+    var senhaVar = inputSenha.value;
+    var confirmacaoSenhaVar = inputSenhaConfirmacao.value;
+
+    if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        divMensagem.style.display = "flex"
+        divMensagem.innerHTML = `Preencha todos os campos!`;
+
+        finalizarAguardar();
+        return false;
+    }
+    else {
+        setInterval(sumirMensagem, 5000)
+    }
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            nomeServer: nomeVar,
+            emailServer: emailVar,
+            nivelServer: nivelVar,
+            senhaServer: senhaVar
+        })
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            divMensagem.style.display = "block";
+            divMensagem.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+            setTimeout(() => {
+                window.location = "login.html";
+            }, "2000")
+
+            limparFormulario();
+            finalizarAguardar();
+        } else {
+            throw ("Houve um erro ao tentar realizar o cadastro!");
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
+    });
+
+    return false;
+}
+
+function sumirMensagem() {
+    divMensagem.style.display = "none"
+}</script>
+   

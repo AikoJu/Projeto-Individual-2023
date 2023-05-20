@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+:root{
+    --rosa: #fdedf2;
+    --rosaEscuro: #a74967;
+    --roxo: #41337a;
+    --verdeClaro:#91D9E2 ;
+    --verde:#43919c;
+}
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear; 
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+body{
+    background-color: var(--rosa);
+}
+
+/* começo da header */
+header{
+    position: sticky;
+    top: 0; left: 0;right: 0;
+    background: var(--roxo);
+    padding: 1rem 2%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+header .logo{
+    display: flex;
+    align-items: center;
+    font-size:  4rem;
+    color: var(--verdeClaro);
+    font-family: 'Sacramento';
+}
+
+.navbar{
+    display: flex;
+    list-style: none;
+    align-items:center ;
+    justify-content:space-around;
+    cursor: pointer;
+}
+
+.navbar li a{
+    font-size: 2rem;
+    font-family: 'Comfortaa';
+    text-decoration: none;
+    color: var(--verdeClaro);
+    margin-left: 1rem;
+}
+
+.navbar button{
+    border: none;
+    font-family: 'Comfortaa';
+    font-size: 2rem;
+    background-color: var(--roxo);
+    color: var(--verdeClaro);
+}
+
+header .logo img{
+    width: 12%;
+    cursor: pointer;
+}
+
+header .navbar a:hover{
+    color: var(--rosaEscuro) ;
+}
+
+ /* fim da header */
+
+ @media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 2rem;
+    }
+}

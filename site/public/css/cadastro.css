@@ -29,14 +29,17 @@ body {
     background-size: cover; 
   }
 
+.inicio{
+    display: flex;
+    margin: 1rem;
+}
+
 .voltar {
-    border-style: none;
     border-radius: 5px;
     display: flex;
     align-items: center;
     background-color: var(--roxo);
     padding: 0.3rem 2rem ;
-    margin: 1rem;
     font-family: 'Comfortaa';
     font-size: 1.2rem;
     color: var(--verdeClaro);
@@ -56,7 +59,18 @@ body {
     background-color: var(--verde);
 }
 
-
+.inicio .divMensagem{
+    border-radius: 8px;
+    display:none;
+    margin-left: 15rem;
+    height: fit-content;
+    width: fit-content;
+    padding: 1rem;
+    font-family: 'Comfortaa';
+    font-size: 1.2rem;
+    background-color: var(--roxo);
+    color: var(--verdeClaro);
+}
 
 
 .container{
@@ -68,8 +82,8 @@ body {
 /* formulario cadastro */
 .container .form {
     border-radius: 5px;
-    height: fit-content;
-    width: 45%;
+    height:fit-content;
+    width:40%;
     background-color: rgba(65, 51, 122, .93);
     margin: 2rem;
     margin-top: 0 ;
@@ -82,10 +96,11 @@ body {
 
 .container .form .costura {
     border-style: dashed;
+    border-radius: 5px;
     border-color: var(--rosa);
     height: fit-content;
-    width: 70%;
-    margin: 2rem;
+    width: 90%;
+    margin: 0.5rem;
     padding: 1rem ;
     display: flex;
     flex-direction: column;
@@ -96,9 +111,8 @@ body {
     display: flex;
     align-items: center;
     font-family: 'Sacramento';
-    font-size: 4rem;
+    font-size: 3.2rem;
     color: var(--verdeClaro);
-   margin-top: 1rem;
 }
 .logo img{
     width: 5rem;
@@ -107,21 +121,22 @@ body {
 
 .titulo{
     font-family: 'Comfortaa';
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--rosa);
     margin-bottom: 0.5rem;    
 }
 
 .dados{
     font-family: 'Comfortaa';
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--rosa);
     margin: 0.3em;
 }
 
-.costura input{
-    width: 25rem;
-    height: 2rem;
+.form .costura input{
+    width: 20rem;
+    padding: 0.5rem;
+    font-family: 'Comfortaa';
     font-size: 1.2rem;
     border-radius: 5px;
     text-align:center;
@@ -129,9 +144,9 @@ body {
 }
 
  .costura select{
-    width: 25rem;
-    height: 2rem;
-    font-size: 1.2rem;
+    width: 20rem;
+    padding: 0.5rem;
+    font-size: 1rem;
     font-family: 'Comfortaa';
     border-radius: 5px;
     text-align:center;
@@ -140,11 +155,11 @@ body {
 
 
 button{
-    padding: 0.5rem;
-    border-radius: 5px;
+    border-radius: 8px;
+    padding: 0.8rem;
     background-color: var(--rosaEscuro);
     font-family: 'Comfortaa';
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: var(--rosa);
     cursor: pointer;
 }
@@ -153,4 +168,9 @@ button:hover{
     background-color: var(--verdeClaro);
     color: var(--rosaEscuro);
     cursor: pointer;
+}
+
+.costura img {
+    display: none;
+    height:8rem;
 }
