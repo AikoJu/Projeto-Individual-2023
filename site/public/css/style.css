@@ -60,6 +60,15 @@ header .logo{
     font-family: 'Comfortaa';
     text-decoration: none;
     color: var(--verdeClaro);
+    margin-left: 1rem;
+}
+
+.navbar button{
+    border: none;
+    font-family: 'Comfortaa';
+    font-size: 2rem;
+    background-color: var(--roxo);
+    color: var(--verdeClaro);
 }
 
 header .logo img{
@@ -70,7 +79,6 @@ header .logo img{
 header .navbar a:hover{
     color: var(--rosaEscuro) ;
 }
-
  /* fim da header */
 
 

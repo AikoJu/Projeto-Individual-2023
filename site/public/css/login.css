@@ -42,7 +42,7 @@ header{
 header .logo{
     display: flex;
     align-items: center;
-    font-size:  4rem;
+    font-size:  3.7rem;
     color: var(--verdeClaro);
     font-family: 'Sacramento';
 }
@@ -60,7 +60,7 @@ header .logo{
     font-family: 'Comfortaa';
     text-decoration: none;
     color: var(--verdeClaro);
-    margin-left: 1rem;
+    margin-left: 2rem;
 }
 
 .navbar button{
@@ -72,7 +72,7 @@ header .logo{
 }
 
 header .logo img{
-    width: 12%;
+    width: 10%;
     cursor: pointer;
 }
 
@@ -81,6 +81,108 @@ header .navbar a:hover{
 }
 
  /* fim da header */
+
+.container{
+    width: 100%;
+    display:flex;
+    justify-content:center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+
+.caixa{
+    display: flex;
+    justify-content:space-between;
+    border-radius: 5px;
+    box-shadow: 0 .5rem 6rem rgba(0, 0, 0, .95);
+}
+
+.caixa img{
+    height: 100%;
+    width: 50%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.fundo{  
+    width:50%;
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color:var(--roxo);
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+.titulo{
+    font-family: 'Comfortaa';
+    font-size: 3rem;
+    color: var(--rosa);
+    padding: 2rem;    
+}
+
+.form{
+    height: 70%;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem;
+    border-radius :5px ;
+    border-color: var(--rosa);
+    border-style: dashed;
+}
+
+
+.dados{
+    font-family: 'Comfortaa';
+    font-size: 3rem;
+    color: var(--rosa);
+    margin-top:3rem
+}
+
+.form input{
+    width: auto;
+    padding: 1rem;
+    font-family: 'Comfortaa';
+    font-size: 2rem;
+    border-radius: 5px;
+    text-align:center;
+}
+.form button{
+    border-radius: 8px;
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: var(--rosaEscuro);
+    font-family: 'Comfortaa';
+    font-size: 2rem;
+    color: var(--rosa);
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--verdeClaro);
+    color: var(--rosaEscuro);
+    cursor: pointer;
+}
+
+p{
+    font-family: 'Comfortaa';
+    font-size: 1.5rem;
+    color: var(--rosa);
+    margin-top: 1rem ;
+}
+
+a{
+    font-family: 'Comfortaa';
+    font-size: 1.5rem;
+    color: var(--rosa);
+}
+
+a:hover{
+    color: var(--rosaEscuro);
+}
 
  @media(max-width:991px){
     html{

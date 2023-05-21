@@ -14,7 +14,6 @@
 <body>
     <div class="inicio">
         <a href="index.html"><button class="voltar" >Voltar a home <img src="assets/img/image-removebg-preview.png"></button> </a>
-        <div class="divMensagem" id="divMensagem"></div>
     </div>
     
     <div class="container">
@@ -29,7 +28,7 @@
             
             <p class="dados" >E-mail</p>
             <input id="inputEmail" placeholder="email@email.com">
-            <span class="spanMgsErro"></span>
+            <span class="divMensagem" id="divEmail"></span>
 
             <p class="dados">Nível</p>
             <select class="select" id="selectNivel">
@@ -40,16 +39,15 @@
             
             <p class="dados">Senha</p>
             <input id="inputSenha" placeholder="Minímo de 6 digitos!" type="password">  
-            <span class="spanMgsErro" ></span>
+            <span class="divMensagem" id="divSenha"></span>
 
             <p class="dados">Confirme a senha</p>
             <input id="inputSenhaConfirmacao" placeholder="******" type="password">
-            <span class="spanMgsErro"></span>
-
+            <div class="divMensagem" id="divMensagem"></div>
             <button onclick="cadastrar()">
                 Cadastrar
             </button>
-            <div class = "divAguardar" id="div_aguardar"   ><img src="assets/img/loading.gif"></div>
+            <div class = "divAguardar" id="div_aguardar"><img src="assets/img/loading.gif"></div>
             </div>
         </div>
     </div>
@@ -58,8 +56,6 @@
 <script>
 function cadastrar() {
     aguardar();
-    //Recupere o valor da nova input pelo nome do id
-    // Agora vá para o método fetch logo abaixo
     var nomeVar = inputNome.value;
     var emailVar = inputEmail.value;
     var nivelVar = selectNivel.value;
@@ -73,11 +69,18 @@ function cadastrar() {
         finalizarAguardar();
         return false;
     }
+    if(emailVar.indexOf('@') || emailVar.indexOf('.')){
+        divEmail.style.display = "flex"
+        divEmail.innerHTML = `Email inválido!`;
+
+        finalizarAguardar();
+        return false;
+    }
     else {
         setInterval(sumirMensagem, 5000)
     }
 
-    // Enviando o valor da nova input
+    
     fetch("/usuarios/cadastrar", {
         method: "POST",
         headers: {

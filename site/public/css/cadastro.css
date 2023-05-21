@@ -59,19 +59,6 @@ body {
     background-color: var(--verde);
 }
 
-.inicio .divMensagem{
-    border-radius: 8px;
-    display:none;
-    margin-left: 15rem;
-    height: fit-content;
-    width: fit-content;
-    padding: 1rem;
-    font-family: 'Comfortaa';
-    font-size: 1.2rem;
-    background-color: var(--roxo);
-    color: var(--verdeClaro);
-}
-
 
 .container{
     display: flex;
@@ -153,7 +140,6 @@ body {
     margin-bottom: 1rem;
 }
 
-
 button{
     border-radius: 8px;
     padding: 0.8rem;
@@ -168,6 +154,15 @@ button:hover{
     background-color: var(--verdeClaro);
     color: var(--rosaEscuro);
     cursor: pointer;
+}
+.divMensagem{
+    border-radius: 8px;
+    display:none;
+    height: fit-content;
+    width: fit-content;
+    font-family: 'Comfortaa';
+    font-size: 1rem;
+    color: red;
 }
 
 .costura img {
