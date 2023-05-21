@@ -67,17 +67,35 @@ function cadastrar() {
         divMensagem.innerHTML = `Preencha todos os campos!`;
 
         finalizarAguardar();
+        setTimeout(sumirMensagem, 4000)
         return false;
     }
-    if(emailVar.indexOf('@') || emailVar.indexOf('.')){
-        divEmail.style.display = "flex"
-        divEmail.innerHTML = `Email inválido!`;
+    else if(emailVar.indexOf('@') == -1|| emailVar.indexOf('.') == -1){
+        divMensagem.style.display = "flex"
+        divMensagem.innerHTML = `Email inválido!`;
 
         finalizarAguardar();
+        setTimeout(sumirMensagem, 4000)
+        return false;
+    }
+    else if(senhaVar.length < 6  ){
+        divMensagem.style.display = "flex"
+        divMensagem.innerHTML = `Senha curta demais!`;
+
+        finalizarAguardar();
+        setTimeout(sumirMensagem, 4000)
+        return false;
+    }
+    else if(senhaVar != confirmacaoSenhaVar){
+        divMensagem.style.display = "flex"
+        divMensagem.innerHTML = `Oops! As senhas não coincidem verifique novamente!`;
+
+        finalizarAguardar();
+        setTimeout(sumirMensagem, 4000)
         return false;
     }
     else {
-        setInterval(sumirMensagem, 5000)
+        setTimeout(sumirMensagem, 5000)
     }
 
     
@@ -100,6 +118,7 @@ function cadastrar() {
 
         if (resposta.ok) {
             divMensagem.style.display = "block";
+            divMensagem.style.color = "var(--verdeClaro)";
             divMensagem.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
             setTimeout(() => {
@@ -120,6 +139,8 @@ function cadastrar() {
 }
 
 function sumirMensagem() {
+    
     divMensagem.style.display = "none"
+
 }</script>
    
