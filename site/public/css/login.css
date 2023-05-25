@@ -139,7 +139,7 @@ header .navbar a:hover{
     font-family: 'Comfortaa';
     font-size: 3rem;
     color: var(--verdeClaro);
-    margin-top:3rem
+    margin-top:2.5rem;
 }
 
 .form input{
@@ -182,6 +182,11 @@ header .navbar a:hover{
 
 .caixa a:hover{
     color: var(--rosaEscuro);
+}
+
+#msgErro{
+    margin-top: 1rem;
+    font-size: 2rem;
 }
 
  @media(max-width:991px){

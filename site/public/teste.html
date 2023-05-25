@@ -9,57 +9,40 @@
 <body>
     
 
-<p id="timer">00:00:00</p>
-<button onclick="startTimer()">Iniciar</button>
-<button onclick="stopTimer()">Parar</button>
-<button onclick="resetTimer()">Reiniciar</button>
+<p class="timer"><span id="horas">00</span>:<span id="minutos">00</span>:<span id="segundos">00</span></p>
+<button onclick="comecarTimer()">Iniciar</button>
+<button onclick="pausarTimer()">Parar</button>
+<button onclick="recomecarTimer()">Zerar</button>
 </body>
 </html>
 <script>
-var currentTimeString = hours + ":" + minutes + ":" + seconds + "." + milliseconds;
-var timerId;
-var startTime;
-var elapsedTime = 0;
-var isRunning = false;
-
-function updateTimer() {
-  var currentTime = Date.now();
-  elapsedTime = currentTime - startTime;
-  
-  var milliseconds = Math.floor(elapsedTime % 1000);
-  var seconds = Math.floor((elapsedTime / 1000) % 60);
-  var minutes = Math.floor((elapsedTime / 1000 / 60) % 60);
-  var hours = Math.floor((elapsedTime / 1000 / 60 / 60) % 24);
-  
-  // Formatação para duas casas decimais
-  milliseconds = ("00" + milliseconds).slice(-3);
-  seconds = ("0" + seconds).slice(-2);
-  minutes = ("0" + minutes).slice(-2);
-  hours = ("0" + hours).slice(-2);
-  
-  timer.innerHTML = hours + ":" + minutes + ":" + seconds + "." + milliseconds;
+  var contador = 0
+  var inicio = 0
+function comecarTimer(){
+  inicio = setInterval(()=>atualizarTimer(),1000)
 }
 
-function startTimer() {
-  if (!isRunning) {
-    isRunning = true;
-    startTime = Date.now() - elapsedTime;
-    timerId = setInterval(updateTimer, 10); // Atualiza o cronômetro a cada 10 milissegundos
+function pausarTimer(){
+  clearInterval(inicio)
+  segundos.innerHTML = contador
+}
+
+function recomecarTimer(){
+  clearInterval(inicio)
+  inicio = 0
+  contador = 0
+  segundos.innerHTML = "00"
+}
+
+function atualizarTimer(){
+  contador ++
+  if(contador < 10){
+    segundos.innerHTML = `0${contador}`  
+  }else{
+    segundos.innerHTML = contador
   }
+
+    
+    
 }
-
-function stopTimer() {
-  if (isRunning) {
-    isRunning = false;
-    clearInterval(timerId);
-  }
-}
-
-function resetTimer() {
-  stopTimer();
-  elapsedTime = 0;
-  updateTimer();
-}
-
-
 </script>
