@@ -8,96 +8,37 @@
 </head>
 <body>
     
-</body>
-</html>
 
 <p id="timer">00:00:00</p>
-<button id="startButton">Iniciar</button>
-<button id="stopButton">Parar</button>
-<button id="resetButton">Reiniciar</button>
-<button id="saveButton">Salvar Tempo</button>
-<ul id="savedTimes"></ul>
-
-
-function insertTime(time) {
-    const query = 'INSERT INTO tempos (tempo) VALUES (?)';
-    connection.query(query, [time], (err, results) => {
-      if (err) {
-        console.error('Erro ao inserir tempo:', err);
-        return;
-      }
-      console.log('Tempo inserido com sucesso no banco de dados.');
-    });
-  }
-
-  
-  
-  // Endpoint para receber os tempos salvos
-  app.post('/save-time', (req, res) => {
-    const time = req.body.time; // Supondo que o tempo seja enviado no corpo da requisição
-    insertTime(time);
-    res.status(200).json({ message: 'Tempo salvo com sucesso.' });
-  });
-
-  // Endpoint para buscar os tempos salvos
-app.get('/get-times', (req, res) => {
-  const query = 'SELECT * FROM tempos';
-  connection.query(query, (err, results) => {
-    if (err) {
-      console.error('Erro ao buscar tempos:', err);
-      res.status(500).json({ message: 'Erro ao buscar tempos.' });
-      return;
-    }
-    res.status(200).json(results);
-  });
-});
-
-
-
-
-
-
-
-// JavaScript
-var savedTimes = [];
-var timerElement = document.getElementById("timer");
-var startButton = document.getElementById("startButton");
-var stopButton = document.getElementById("stopButton");
-var resetButton = document.getElementById("resetButton");
-
-
-
+<button onclick="startTimer()">Iniciar</button>
+<button onclick="stopTimer()">Parar</button>
+<button onclick="resetTimer()">Reiniciar</button>
+</body>
+</html>
+<script>
 var currentTimeString = hours + ":" + minutes + ":" + seconds + "." + milliseconds;
-
-
 var timerId;
 var startTime;
 var elapsedTime = 0;
 var isRunning = false;
 
-
-function saveTime() {
-    savedTimes.push(currentTimeString);
-    updateSavedTimes();
-  }
-
+function updateTimer() {
+  var currentTime = Date.now();
+  elapsedTime = currentTime - startTime;
   
-  function updateSavedTimes() {
-    var savedTimesElement = document.getElementById("savedTimes");
-    savedTimesElement.innerHTML = "";
-    
-    for (var i = 0; i < savedTimes.length; i++) {
-      var timeItem = document.createElement("li");
-      timeItem.textContent = savedTimes[i];
-      savedTimesElement.appendChild(timeItem);
-    }
-  }
-
-  var saveButton = document.getElementById("saveButton");
-saveButton.addEventListener("click", saveTime);
-
-
-
+  var milliseconds = Math.floor(elapsedTime % 1000);
+  var seconds = Math.floor((elapsedTime / 1000) % 60);
+  var minutes = Math.floor((elapsedTime / 1000 / 60) % 60);
+  var hours = Math.floor((elapsedTime / 1000 / 60 / 60) % 24);
+  
+  // Formatação para duas casas decimais
+  milliseconds = ("00" + milliseconds).slice(-3);
+  seconds = ("0" + seconds).slice(-2);
+  minutes = ("0" + minutes).slice(-2);
+  hours = ("0" + hours).slice(-2);
+  
+  timer.innerHTML = hours + ":" + minutes + ":" + seconds + "." + milliseconds;
+}
 
 function startTimer() {
   if (!isRunning) {
@@ -120,24 +61,5 @@ function resetTimer() {
   updateTimer();
 }
 
-function updateTimer() {
-  var currentTime = Date.now();
-  elapsedTime = currentTime - startTime;
-  
-  var milliseconds = Math.floor(elapsedTime % 1000);
-  var seconds = Math.floor((elapsedTime / 1000) % 60);
-  var minutes = Math.floor((elapsedTime / 1000 / 60) % 60);
-  var hours = Math.floor((elapsedTime / 1000 / 60 / 60) % 24);
-  
-  // Formatação para duas casas decimais
-  milliseconds = ("00" + milliseconds).slice(-3);
-  seconds = ("0" + seconds).slice(-2);
-  minutes = ("0" + minutes).slice(-2);
-  hours = ("0" + hours).slice(-2);
-  
-  timerElement.textContent = hours + ":" + minutes + ":" + seconds + "." + milliseconds;
-}
 
-startButton.addEventListener("click", startTimer);
-stopButton.addEventListener("click", stopTimer);
-resetButton.addEventListener("click", resetTimer);
+</script>

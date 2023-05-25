@@ -7,6 +7,7 @@
     --roxo: #41337a;
     --verdeClaro:#91D9E2 ;
     --verde:#43919c;
+    --roxoClaro:#9C95DC;
 }
 
 *{
@@ -31,6 +32,7 @@ body{
 /* começo da header */
 header{
     position: sticky;
+    z-index: 1;
     top: 0; left: 0;right: 0;
     background: var(--roxo);
     padding: 1rem 2%;
@@ -41,6 +43,7 @@ header{
 
 header .logo{
     display: flex;
+    
     align-items: center;
     font-size:  4rem;
     color: var(--verdeClaro);
@@ -82,10 +85,81 @@ header .navbar a:hover{
  /* fim da header */
 
 
+ .banner img{
+    width: 100%;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .8 );
+    
+ }
+.banner .texto{
+    position: absolute;
+    top: 40%;
+    margin-left:2rem ;
+    color: var(--roxo);
+    font-size: 5rem;
+    font-family: 'Comfortaa';
+    background-color: rgba(145,217,226, .8);
+    border-radius: 60px;
+    padding: 2rem;
 
+}
 
+.banner .texto .destaqueBanner{
+    color: var(--rosaEscuro);
+}
 
+/*fim do banner */
 
+.container{
+    width: 100%; 
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+#conheca{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    
+}
+.textoConheca{
+    width: 50%;
+    margin: 2rem 0rem;
+    display: flex;
+    flex-direction: column;
+    border-top-right-radius : 8px;
+    border-bottom-right-radius : 8px;
+    align-items: center;
+    justify-content: center;
+    background-color:rgba(145,217,226, .8);
+}
+
+.linhaConheca{
+    width: 90% ;
+    height: 90%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    border-style: dashed;
+    text-align: center;
+    border-color: var(--rosaEscuro);
+}
+
+.textoConheca p{
+    padding: 2rem;
+    font-size: 3rem;
+    font-family: 'Comfortaa';
+    color: #0c0722;
+}
+.imgConheca{
+    padding: 5rem 10rem;
+    width: 50%;
+}
+.imgConheca img{
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 0 .5rem 1rem  rgba(65, 51, 122, .95) ;
+}
 
 
 @media(max-width:991px){
