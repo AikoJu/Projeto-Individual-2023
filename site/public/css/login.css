@@ -184,9 +184,19 @@ header .navbar a:hover{
     color: var(--rosaEscuro);
 }
 
-#msgErro{
-    margin-top: 1rem;
-    font-size: 2rem;
+#divMensagem{
+    border-radius: 8px;
+    display:none;
+    height: fit-content;
+    width: fit-content;
+    font-family: 'Comfortaa';
+    font-size: 1rem;
+    color:rgb(218, 53, 94);
+}
+
+.divAguardar{
+    display: none;
+    width: 10rem;
 }
 
  @media(max-width:991px){

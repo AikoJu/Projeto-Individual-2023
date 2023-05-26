@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/img/image-removebg-preview.png" type="image/x-icon">
+    <script src="js/funcoes.js"></script>
     <link rel="stylesheet" href="css/login.css">
     <title>Crochetando... | Login</title>
 </head>
@@ -30,10 +31,11 @@
         
             <p class="dados" >Senha</p>
             <input id="inputSenha" placeholder="••••••">
-            <span id="msgErro">Sexo</span>
+            <div id="divMensagem">Sexo</div>
             <button onclick="entrar()">
                 Entrar
             </button>
+            <div class = "divAguardar" id="divAguardar"><img src="assets/img/loading.gif"></div>
             </div>
             <p class="conta">Ainda não possui uma conta?</p>
             <p><a href="cadastro.html">Clique aqui!</a></p>
@@ -51,8 +53,8 @@
         var senhaVar = inputSenha.value;
 
         if (emailVar == "" || senhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            divMensagem.style.display = "block"
+            divMensagem.innerHTML = "(Mensagem de erro para todos os campos em branco)";
             finalizarAguardar();
             return false;
         }
@@ -87,7 +89,7 @@
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
+                        window.location = "./dashboard/index.html";
                     }, 1000); // apenas para exibir o loading
 
                 });
@@ -110,6 +112,6 @@
     }
 
     function sumirMensagem() {
-        cardErro.style.display = "none"
+        divMensagem.style.display = "none"
     }
 </script>

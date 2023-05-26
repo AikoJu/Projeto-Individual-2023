@@ -26,17 +26,17 @@ function limparSessao() {
 
 // carregamento (loading)
 function aguardar() {
-    var divAguardar = document.getElementById("div_aguardar");
+    var divAguardar = document.getElementById("divAguardar");
     divAguardar.style.display = "flex";
 }
 
 function finalizarAguardar(texto) {
-    var divAguardar = document.getElementById("div_aguardar");
-    divAguardar.style.display = "none";
+    var divAguardar = document.getElementById("divAguardar");
+    divAguardar.style.display = "none"
 
-    var divMensagem = document.getElementById("div_erros_login");
+    var divMensagem = document.getElementById("divMensagem");
     if (texto) {
-        divMensagem.style.display = "flex";
+        divMensagem.style.display = "block";
         divMensagem.innerHTML = texto;
     }
 }
