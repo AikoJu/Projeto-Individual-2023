@@ -246,12 +246,12 @@ header .navbar a:hover{
 }
 
 #divMensagem{
-    border-radius: 8px;
     display:none;
     height: fit-content;
     width: fit-content;
     font-family: 'Comfortaa';
-    font-size: 1rem;
+    font-size: 2rem;
+    margin-top: 1rem;
     color:rgb(218, 53, 94);
 }
 
