@@ -15,7 +15,8 @@
     outline: none;
     border: none;
     text-decoration: none;
-    transition: .2s linear; 
+    transition: .2s linear;
+    font-family: 'Comfortaa'; 
 }
 
 html{
@@ -65,7 +66,6 @@ header .logo{
 
 .navbar button{
     border: none;
-    font-family: 'Comfortaa';
     font-size: 2rem;
     background-color: var(--roxo);
     color: var(--verdeClaro);
@@ -79,6 +79,67 @@ header .logo img{
 header .navbar a:hover{
     color: var(--rosaEscuro) ;
 }
+
+
+.navbar{
+    display: flex;
+    list-style: none;
+    align-items:center ;
+    justify-content:space-around;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.navbar li a{
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--verdeClaro);
+    margin-left: 1rem;
+    float: left;
+    text-align: center;
+}
+
+.navbar button{
+    border: none;
+    font-size: 2rem;
+    background-color: var(--roxo);
+    color: var(--verdeClaro);
+    outline: none;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+   color: var(--rosaEscuro);
+   
+  }
+  
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--roxo);
+    min-width: 10rem;
+    z-index: 1;
+    flex-direction: column;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    padding: 1rem;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+  
+  .dropdown-content a:hover {
+    color: var(--rosaEscuro);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: flex;
+  }
 
  /* fim da header */
 
