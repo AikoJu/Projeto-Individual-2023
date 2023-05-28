@@ -180,6 +180,10 @@ header .navbar a:hover{
 .linhaConheca{
     width: 90% ;
     height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border-style: dashed;
     text-align: center;
     border-color: var(--rosaEscuro);
@@ -187,9 +191,6 @@ header .navbar a:hover{
 
 .textoConheca p{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 2rem;
     font-size: 3rem;
     color: #0c0722;
@@ -221,6 +222,13 @@ header .navbar a:hover{
     margin-bottom: 2%;
 }
 
+.introducao p{
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    padding: 1rem;
+}
+
 .cardsExemplos{
     width: 100%;
     height: fit-content;
@@ -228,15 +236,7 @@ header .navbar a:hover{
     flex-direction: column;
     justify-content: space-between;
 }
-.cardsExemplos .introducao{
-    margin-bottom: -5%;
-    margin-left: 50%;
-    font-size: 3rem;
-}
 
-.introducao p{
-    font-size: 3rem;
-}
 
 
 .exemplo1{
@@ -252,8 +252,8 @@ header .navbar a:hover{
 
 .exemplo2{
     width: 50%;
-    margin-top: -16%;
     margin-left: 50%;
+    margin-top: -16%;
     padding: 2rem;
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
