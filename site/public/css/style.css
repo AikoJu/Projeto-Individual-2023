@@ -11,6 +11,11 @@
     --roxoClaro:#9C95DC;
 }
 
+::selection {
+    background: var(--roxoClaro);
+  }
+
+
 *{
     margin: 0; padding: 0;
     box-sizing: border-box;
@@ -70,7 +75,7 @@ header .logo{
     font-size: 2rem;
     text-decoration: none;
     color: var(--verdeClaro);
-    margin-left: 1rem;
+    margin-left: 1.8rem;
     float: left;
     text-align: center;
 }
@@ -95,18 +100,18 @@ header .logo{
   .dropdown-content {
     display: none;
     position: absolute;
+    min-width: fit-content;
     background-color: var(--roxo);
-    min-width: 10rem;
     z-index: 1;
     flex-direction: column;
+
   }
   
   .dropdown-content a {
-    float: none;
+    margin-right: 1.5rem;
     padding: 1rem;
     text-decoration: none;
     display: block;
-    text-align: center;
   }
   
   .dropdown-content a:hover {
@@ -159,6 +164,8 @@ header .navbar a:hover{
     flex-direction: column;
 }
 
+
+/*Começo da parte conheca*/
 #conheca{
     width: 100%;
     height: fit-content;
@@ -205,6 +212,10 @@ header .navbar a:hover{
     box-shadow: 0 .5rem 1rem  rgba(65, 51, 122, .95) ;
 }
 
+
+
+/*Começo da parte fazer*/
+
 .fazer{
     height: fit-content;
     width: 100%;
@@ -225,8 +236,14 @@ header .navbar a:hover{
 .introducao p{
     display: flex;
     justify-content: center;
-    font-size: 3rem;
+    font-size: 2.7rem;
     padding: 1rem;
+}
+
+.introducao{
+    display: flex;
+    justify-content:center;
+    padding: 2rem;
 }
 
 .cardsExemplos{
@@ -237,7 +254,13 @@ header .navbar a:hover{
     justify-content: space-between;
 }
 
-
+.textoCards{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+}
 
 .exemplo1{
     width: 49%;
@@ -246,6 +269,7 @@ header .navbar a:hover{
     border-bottom-right-radius: 2rem;
     background-color: var(--roxoClaro);
 }
+
 .exemplo1 img{
     border-radius: 8px;
 }
@@ -258,7 +282,10 @@ header .navbar a:hover{
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
     background-color:var(--verdeClaro);
-    
+}
+
+.exemplo2 img{
+    border-radius: 8px;
 }
 
 .exemplo3{
@@ -269,6 +296,10 @@ header .navbar a:hover{
     border-bottom-right-radius: 2rem;
     background-color:var(--rosaEscuro);
     
+}
+
+.exemplo3 img{
+    border-radius: 8px;
 }
 
 .tituloCards{
@@ -289,6 +320,19 @@ header .navbar a:hover{
 .containerCards img{
 width: 50%;
 }
+/* Fim da seção fazer */
+
+#diferenca{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
 
 
 

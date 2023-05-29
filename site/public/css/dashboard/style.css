@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+
+:root{
+    --rosa: #fdedf2;
+    --rosaEscuro: #a74967;
+    --roxo: #41337a;
+    --verdeClaro:#91D9E2 ;
+    --verde:#43919c;
+    --roxoClaro:#9C95DC;
+}
+
+::selection {
+    background: var(--roxoClaro);
+  }
+
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+    font-family:'Comfortaa' ;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+body{
+    background-color: var(--rosa);
+}
+
+.sidenav {
+    height: 100%; 
+    width: 12%; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: var(--roxoClaro);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  
+  .sidenav p {
+    padding: 2rem;
+    font-size: 2rem;
+  }
+
+  .navbar{
+    font-size: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    list-style: none;
+    margin-bottom: 1rem;
+  }
+
+  .navbar a{
+    margin-top: 2rem;
+    text-decoration: none;
+  }
+ 
+  .navbar a:hover{
+    color: var(--rosaEscuro);
+  }
+  
+  
+  .container {
+    margin-left:9% ; /* Same as the width of the sidebar */
+    padding: 2rem;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
+
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 2rem;
+    }
+}
