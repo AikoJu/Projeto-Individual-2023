@@ -23,7 +23,6 @@
     border: none;
     text-decoration: none;
     transition: .2s linear;
-    font-family:'Comfortaa' ;
 }
 
 html{
@@ -34,6 +33,7 @@ html{
 }
 body{
     background-color: var(--rosa);
+    font-family: 'Comfortaa';
 }
 
 .sidenav {
@@ -47,7 +47,7 @@ body{
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;  
   }
   
   .sidenav p {
@@ -56,37 +56,59 @@ body{
   }
 
   .navbar{
-    font-size: 2.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 1rem 2rem;
+    text-align: center;
     list-style: none;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;     
+  }
+
+  .navbar li{
+    padding: 2rem;
   }
 
   .navbar a{
-    margin-top: 2rem;
     text-decoration: none;
+    color: var(--roxo);
   }
  
   .navbar a:hover{
     color: var(--rosaEscuro);
   }
   
+  /* fim da navbar */
   
   .container {
-    margin-left:9% ; /* Same as the width of the sidebar */
+    width: 88%;
+    height:100%;
+    margin-left: 12%;
+    overflow-y: scroll;
+  }
+
+  .boasVindas{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 7rem;
     padding: 2rem;
+    font-family:'Sacramento';
   }
   
-  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
+  .introducao{
+    width: 100%;
+    height: fit-content;
+    background-color: #43919c;
+  }
+
+  .receitas{
+    width: 100%;
+    height: fit-content;
+    background-color: #91D9E2;
+  }
+@media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
-
-
 
 
 @media(max-width:991px){
