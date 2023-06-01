@@ -9,6 +9,14 @@ var mySqlConfig = {
     password: "Bananinha123",
 };
 
+//my sql pc 
+// var mySqlConfig = {
+//     host: "localhost",
+//     database: "crochetando",
+//     user: "sptech",
+//     password: "030204",
+// };
+
 function executar(instrucao) {
     // VERIFICA A VARIÁVEL DE AMBIENTE SETADA EM app.js
     if (process.env.AMBIENTE_PROCESSO == "producao") {

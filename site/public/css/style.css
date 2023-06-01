@@ -212,6 +212,25 @@ header .navbar a:hover{
     box-shadow: 0 .5rem 1rem  rgba(65, 51, 122, .95) ;
 }
 
+#grafico{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerGrafico{
+    width: 100%;
+    height: fit-content;
+    padding: 2rem;
+}
+
+.miniDashboard{
+    display: flex;
+    align-items: left;
+    border-radius: 8px;
+    width: 80%;
+    background-color: #41337a;
+}
 
 
 /*Começo da parte fazer*/
@@ -241,6 +260,7 @@ header .navbar a:hover{
 }
 
 .introducao{
+    text-align: center;
     display: flex;
     justify-content:center;
     padding: 2rem;
