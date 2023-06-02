@@ -132,6 +132,29 @@ header .navbar a:hover{
 }
  /* fim da header */
 
+ .titulos{
+    font-family: 'Sacramento';
+    display: flex;
+    justify-content: center;
+    color: var( --rosaEscuro);
+    font-size: 8rem;
+    font-style: italic;
+    margin-bottom: 2%;
+}
+
+.introducao p{
+    display: flex;
+    justify-content: center;
+    font-size: 2.7rem;
+    padding: 1rem;
+}
+
+.introducao{
+    text-align: center;
+    display: flex;
+    justify-content:center;
+    padding: 2rem;
+}
 
  .banner img{
     width: 100%;
@@ -216,21 +239,45 @@ header .navbar a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.containerGrafico{
-    width: 100%;
-    height: fit-content;
     padding: 2rem;
 }
 
 .miniDashboard{
     display: flex;
-    align-items: left;
+    justify-content: space-evenly;
     border-radius: 8px;
     width: 80%;
     background-color: #41337a;
 }
+
+.containerGrafico{
+    display: flex;
+    justify-content: left;
+    width: 50rem;
+    padding: 2rem;
+
+}
+            
+.sideCards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem;
+    font-size: 2rem;
+    color: white;
+}
+.sideCardsItem{
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 1.5rem;
+    display: flex;
+    width: 40rem;
+    height: fit-content;
+    background-color: var(--verdeClaro);
+    font-size: 1.5rem;
+}
+
 
 
 /*Começo da parte fazer*/
@@ -240,30 +287,6 @@ header .navbar a:hover{
     width: 100%;
     display: flex;
     flex-direction: column;
-}
-
-.titulos{
-    font-family: 'Sacramento';
-    display: flex;
-    justify-content: center;
-    color: var( --rosaEscuro);
-    font-size: 8rem;
-    font-style: italic;
-    margin-bottom: 2%;
-}
-
-.introducao p{
-    display: flex;
-    justify-content: center;
-    font-size: 2.7rem;
-    padding: 1rem;
-}
-
-.introducao{
-    text-align: center;
-    display: flex;
-    justify-content:center;
-    padding: 2rem;
 }
 
 .cardsExemplos{
