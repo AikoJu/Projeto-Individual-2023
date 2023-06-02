@@ -370,10 +370,46 @@ width: 50%;
     height: fit-content;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+.containerDiferenca{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+#diferenca img{
+    width: 100rem;
+}
+
+.diferencaTexto{
+    width: 100%;
+    padding: 1rem;
+    font-size: 2rem;
+    border: var(--roxoClaro) dashed;
 }
 
 
+/* footer */
+footer {
+    width: 100%;
+    background-color:var(--roxo);
+    padding: 2rem;
+  }
+  
+  .containerFooter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+  }
+  
 
+  
 
 
 
