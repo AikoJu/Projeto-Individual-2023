@@ -10,7 +10,7 @@ function dadosGrafico(req, res) {
         .catch(
             function (erro) {
                 console.log(erro);
-                console.log("Houve um erro bos dados do chefe: ", erro.sqlMessage);
+                console.log("Houve um erro:", erro.sqlMessage);
                 res.status(500).json(erro.sqlMessage);
             }
         );
