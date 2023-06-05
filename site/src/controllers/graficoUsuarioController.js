@@ -16,7 +16,24 @@ function dadosGrafico(req, res) {
         );
 }
 
+function dadosAtuais(req, res){
+    graficoUsuarioModel.dadosAtuais()
+        .then(
+            function (resultado){
+                res.json(resultado);
+            }
+        )
+        .catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro:", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        )
+}
+
 module.exports = {
-    dadosGrafico
+    dadosGrafico,
+    dadosAtuais
 }
 

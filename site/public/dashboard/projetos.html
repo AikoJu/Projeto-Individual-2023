@@ -7,32 +7,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/img/image-removebg-preview.png" type="image/x-icon">
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
     <title>Crochetando... | Projetos</title>
-    <script src="../js/funcoes.js"></script>
+    <script defer src="../js/funcoes.js"></script>
+    <script defer src="../js/projeto.js"></script>
     <link rel="stylesheet" href="../css/dashboard/style.css">
 </head>
 
-<body onload="validarSessao(), atualizacaoPeriodica()">
+<body onload="validarSessao();obterProjetos()">
 
-    <div class="sidenav">
-        <ul class="navbar">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="#">Meus Projetos</a></li>
-            <li><a href="analise.html">Análises</a></li>
-        </ul>
-      </div>
+  
+  <div class="sidenav">
+    <ul class="navbar">
+        <li><a href="#">Meus Projetos</a></li>
+        <li><a href="receitas.html">Receitas</a></li>
+        <li><a href="../index.html">Sair</a></li>
+    </ul>
+  </div>
       
-      <div class="container">
+    <div class="container">
         <div class="boasVindas">
-          <p> Olá <span id="b_usuario">usuário</span>, Bem vindo ao seu ateliê! </p>
+          <p> Olá <span id="b_usuario">usuário</span>,Bem vindo(a) ao seu ateliê</p>
           </div>
         <div class="introducao">
-          
+          <p> Aqui você cria e vê seus projetos!</p> 
         </div>
-        <div class="receitas">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam quidem corporis at, nemo rerum velit eum, doloremque soluta assumenda repellendus reprehenderit beatae molestiae. Facilis libero porro sit, reprehenderit molestias qui.</div>
       
+      <div id="containerProjeto">
+        <div class="cadastro">
+          Criar um novo projeto 
+          <p>Nome do Projeto:</p>
+          <input type="text" id="nomeProjeto">
+          <button onclick="cadastrarProjeto()"><span class="iconify" data-icon="akar-icons:plus" data-width="30" data-height="30"></span></button>
+        </div>
+         
+
       </div>
-      
+      </div>
 
     </body>
 </html>

@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+
+:root{
+    --rosa: #fdedf2;
+    --rosaEscuro: #a74967;
+    --roxo: #41337a;
+    --verdeClaro:#91D9E2 ;
+    --verde:#43919c;
+    --roxoClaro:#9C95DC;
+}
+
+::selection {
+    background: var(--roxoClaro);
+  }
+
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .1s linear;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+body{
+    background-color: var(--rosa);
+    display: flex;
+    font-family: 'Comfortaa';
+}
+
+#containerProjetoArea{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.contador{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   margin-left: 12%;
+   height: 100%;
+   width: 50%;
+   gap: 2rem;
+}
+
+.carreiraEPonto{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 1.5rem;
+    width: 30rem;
+    height: fit-content;
+   background-color: var(--rosaEscuro); 
+   font-size: 2rem;
+   border-radius: 8px;
+}
+
+.carreiraEPonto input{
+    text-align: center;
+    width: 20rem;
+    border-radius: 8px;
+    font-size: 2rem;
+}
+
+.carreiraEPonto button{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 100%;
+    background-color: var(--roxo);
+    cursor: pointer;
+  }
+  
+  .carreiraEPonto button:hover{
+    background-color: var(--verde);
+    color: white;
+  }
+
+  #carreiraEPontoAtual{
+    padding: 2rem;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 1.5rem;
+    width: 30rem;
+    height: fit-content;
+   background-color: var(--verdeClaro); 
+   font-size: 2rem;
+   border-radius: 8px;
+}
+
+#carreiraEPontoAtual button{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 100%;
+    background-color: var(--roxoClaro);
+    cursor: pointer;
+  }
+
+#carreiraEPontoAtual button:hover{
+    background-color: var(--verde);
+    color: white;
+  }
+
+.botaoContador{
+    display: flex;
+    column-gap: 3rem;
+}
+
+#divMensagem{
+    font-size: 2.5rem;
+}
+
+.btnSalvar{
+    font-family: 'comfortaa';
+    width: fit-content;
+    font-size: 2rem;
+    padding: 2rem;
+    border-radius :8px ;
+    cursor: pointer;
+    background-color: #43919c;
+}
+.btnSalvar:hover{
+    background-color: var(--rosaEscuro);
+    color: white;
+  }
+
+.receitaProjeto{
+    width: 50%;
+}
+
+.cadastrarReceita{
+    background-color: #a74967;
+}

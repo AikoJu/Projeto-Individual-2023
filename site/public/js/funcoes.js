@@ -17,6 +17,7 @@ function validarSessao() {
     }
 }
 
+
 function limparSessao() {
     // aguardar();
     sessionStorage.clear();
@@ -41,14 +42,4 @@ function finalizarAguardar(texto) {
     }
 }
 
-// modal
-function mostrarModal() {
-    var divModal = document.getElementById("div_modal");
-    divModal.style.display = "flex";
-}
-
-function fecharModal() {
-    var divModal = document.getElementById("div_modal");
-    divModal.style.display = "none";
-}
 

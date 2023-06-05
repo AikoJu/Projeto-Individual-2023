@@ -11,5 +11,9 @@ router.get("/dadosGrafico", function (req, res) {
     graficoUsuarioController.dadosGrafico(req, res);
 });
 
+router.get("/dadosAtuais", function (req,res) {
+    graficoUsuarioController.dadosAtuais(req, res);
+});
+
 
 module.exports = router;

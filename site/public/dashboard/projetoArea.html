@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="shortcut icon" href="../assets/icon/favicon2.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/img/image-removebg-preview.png" type="image/x-icon">
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <title>Crochetando... | Projetos</title>
+    <script defer src="../js/funcoes.js"></script>
+    <script defer src="../js/projetoArea.js"></script>
+    <link rel="stylesheet" href="../css/dashboard/style.css">
+    <link rel="stylesheet" href="../css/dashboard/areaProjeto.css">
+</head>
+
+<body onload="{obterDadosProjeto();obterReceita()}">
+
+  
+  <div class="sidenav">
+    <ul class="navbar">
+        <li><a href="projetos.html">Meus Projetos</a></li>
+        <li><a href="receitas.html">Receitas</a></li>
+        <li><a href="../index.html">Sair</a></li>
+    </ul>
+  </div>
+  <div class="container">
+        <div class="boasVindas">
+          <p><span id="nomeProjeto">projeto</span></p>
+          </div>
+          
+          <div id="containerProjetoArea">
+        <div class="contador">
+           <div class="carreiraEPonto">
+              Quantidade de carreiras:
+              <input id="carreiraInput" type="number" min="1">
+              Quantidade de pontos na carreira:
+              <input id="pontosInput" type="number" min="1">
+              <button onclick="salvar()"><span class="iconify" data-icon="akar-icons:plus" data-width="30" data-height="30"></span></button>
+           </div>
+           <div id="carreiraEPontoAtual">
+            Carreira Atual:
+            <span id="carreiraAtual">1</span>
+            Ponto Atual:
+            <span id="pontoAtual">1</span>
+            <div class="botaoContador">
+            <button onclick="atualizarPontoSubtrair()"><span class="iconify" data-icon="akar-icons:minus" data-width="30" data-height="30"></span></button>
+            <button onclick="atualizarPontoSomar()"><span class="iconify" data-icon="akar-icons:plus" data-width="30" data-height="30"></span></button>
+          </div>   
+          </div>
+          <div id="divMensagem"></div>
+          <button class="btnSalvar" onclick="salvarAtuais()">Salvar carreira e ponto atual</button>
+        </div>
+        <div class="receitaProjeto">
+          <div id="containerReceita">
+            <div class="cadastrarReceita">
+              <p>Nome:</p>
+              <input type="text" id="">
+              <p>Material:</p>
+              <input type="text" id="">
+              <p>Pontos A utilizar</p>
+              <input type="text" id="">
+              <p>Passo a Passo: </p>
+              <input type="text" id="">
+            </div>
+          </div>
+      </div>
+        </div>
+    
+      </div>
+
+    </body>
+</html>

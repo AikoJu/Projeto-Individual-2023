@@ -19,12 +19,15 @@
                       <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="dropdown-content">
-                      <a href="index.html#banner">Link 1</a>
-                      <a href="#">Link 2</a>
-                      <a href="#">Link 3</a>
+                      <a href="#grafico">Análises!</a>  
+                      <a href="#fazer">O que fazer?</a>
+                      <a href="#diferenca">Crochê X Tricô</a>
                     </div>
                 </div></li>
+                <li><a href="tutorial.html">Tutorial</a></li>
                 <li><a href="sobre_mim.html">Sobre mim</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="login.html">Login</a></li>
             </ul>
         </header>
     
@@ -81,7 +84,8 @@
             },
             body: JSON.stringify({
                 emailServer: emailVar,
-                senhaServer: senhaVar
+                senhaServer: senhaVar,
+
             })
         }).then(function (resposta) {
             console.log("ESTOU NO THEN DO entrar()!")
@@ -95,10 +99,10 @@
 
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nomeUsuario;
-                    sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
 
                     setTimeout(function () {
-                        window.location = "./dashboard/index.html";
+                        window.location = "./dashboard/projetos.html";
                     }, 1000); // apenas para exibir o loading
 
                 });

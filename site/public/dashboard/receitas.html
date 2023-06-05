@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="shortcut icon" href="../assets/icon/favicon2.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/img/image-removebg-preview.png" type="image/x-icon">
+    <title>Crochetando... | Receitas</title>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script defer src="../js/funcoes.js"></script>
+    <script defer src="../js/receita.js"></script>
+    <link rel="stylesheet" href="../css/dashboard/style.css">
+</head>
+
+<body onload="validarSessao(), obterReceita()">
+
+  <div class="sidenav">
+    <ul class="navbar">
+        <li><a href="projetos.html">Meus Projetos</a></li>
+        <li><a href="#">Receitas</a></li>
+        <li><a href="../index.html">Sair</a></li>
+    </ul>
+  </div>
+      
+      <div class="container">
+        <div class="boasVindas">
+          <p> Olá <span id="b_usuario">usuário</span>, Aqui estão suas receitas! </p>
+          </div>
+          <div class="introducao">
+            <p> Aqui você pode salvar suas receitas!</p> 
+          </div>
+          <div id="containerProjeto">
+            <div class="cadastroReceita">
+              Adicionar nova receita! 
+              <p>Nome da Receita:</p>
+              <input type="text" id="nomeReceita">
+              <p></p>
+              <button onclick="cadastrarProjeto()"><span class="iconify" data-icon="akar-icons:plus" data-width="30" data-height="30"></span></button>
+            </div>
+             
+    
+          </div>
+      
+
+    </body>
+</html>

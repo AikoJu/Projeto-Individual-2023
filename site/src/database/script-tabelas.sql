@@ -2,8 +2,9 @@ CREATE DATABASE IF NOT EXISTS crochetando;
 
 USE crochetando;
 
+select * FROM USUARIO;
 CREATE TABLE IF NOT EXISTS usuario (
-  idusuario int AUTO_INCREMENT PRIMARY KEY,
+  idUsuario int AUTO_INCREMENT PRIMARY KEY,
   nomeUsuario varchar(45),
   email varchar(60),
   nivel varchar(20),
@@ -11,20 +12,26 @@ CREATE TABLE IF NOT EXISTS usuario (
 );
 
 CREATE TABLE IF NOT EXISTS projeto (
-  idprojeto int AUTO_INCREMENT PRIMARY KEY,
+  idProjeto int AUTO_INCREMENT PRIMARY KEY,
   nomeProjeto varchar(20),
+  carreira int,
+  pontos int,
+  pontosAtual int,
+  carreiraAtual int,
   fkUsuarioProjeto int,
   CONSTRAINT fkUsuario FOREIGN KEY (fkUsuarioProjeto) REFERENCES usuario (idusuario)
 );
 
-
 CREATE TABLE IF NOT EXISTS receitas (
-  idreceitas int AUTO_INCREMENT PRIMARY KEY,
+  idReceitas int AUTO_INCREMENT PRIMARY KEY,
   nomeReceita varchar(50),
   material varchar(40),
-  passoAPasso text,
+  pontosUtilizados varchar(30),
+  passoAPasso varchar(2000),
   fkUsuarioReceita int,
-  CONSTRAINT fkReceitas FOREIGN KEY (fkUsuarioReceita) REFERENCES usuario (idusuario)
+  fkProjeto int,
+  CONSTRAINT fkReceitas FOREIGN KEY (fkUsuarioReceita) REFERENCES usuario (idusuario),
+  CONSTRAINT fkProjeto FOREIGN KEY (fkProjeto) REFERENCES projeto(idProjeto)
 );
 
 INSERT INTO usuario (nomeUsuario, email, nivel, senha) VALUES 
@@ -37,4 +44,6 @@ INSERT INTO usuario (nomeUsuario, email, nivel, senha) VALUES
 ('Usuário 7', 'usuario7@example.com', 'intermediario', 'senha7'),
 ('Usuário 8', 'usuario8@example.com', 'intermediario', 'senha8');
  
- SELECT usuario.nivel,count(nivel) as iniciante FROM usuario group by usuario.nivel;
+ select * from projeto;
+ select * from receitas;
+ select * FROM usuario;

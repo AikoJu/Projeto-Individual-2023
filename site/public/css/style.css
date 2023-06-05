@@ -274,8 +274,9 @@ header .navbar a:hover{
     display: flex;
     width: 40rem;
     height: fit-content;
+    justify-content: center;
     background-color: var(--verdeClaro);
-    font-size: 1.5rem;
+    font-size: 3rem;
 }
 
 
@@ -385,6 +386,12 @@ width: 50%;
     width: 100rem;
 }
 
+.titulo{
+    font-family: 'Comfortaa';
+    font-size: 5rem;
+    text-align: center;
+}
+
 .diferencaTexto{
     width: 100%;
     display: flex;
@@ -399,21 +406,45 @@ width: 50%;
     margin-bottom: 1.5rem;
 }
 
-.diferencaTexto li{
-    font-size: 2rem;
-    list-style:decimal;
-}
 .diferencaTexto img{
     width: 2rem;
 }
 
 
+/* sobre mim */
+.containerConteudo{
+    width: 100%;
+    height: fit-content;
+}
+.sobremim{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+
+.sobremimTexto{
+    font-size: 2rem;
+}
+
+ .wrap {padding: 2rem;
+   float: right; 
+   margin: 5px;
+   margin-bottom: 2rem;
+   background-color: white;
+  }
+
+  .wrap img{
+    width:50rem;
+  }
 
 /* footer */
 footer {
     width: 100%;
     background-color:var(--roxo);
     padding: 2rem;
+    
   }
   
   .containerFooter {
