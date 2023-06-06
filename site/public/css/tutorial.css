@@ -92,35 +92,43 @@
 }
 
 .pt1{
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     display: flex;
     align-items: center;
     height: 100%;
     width: 45%;
     font-size: 1.8rem;
-    padding: 1rem;
+    padding: 1.5rem;
     background-color: var(--verdeClaro);
 }
 
 .pt2{
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     height: 100%;
     width: 45%;
     font-size: 1.8rem;
-    padding: 1rem;
+    padding: 1.5rem;
     background-color: var(--roxo);
 }
 
 .pt3{
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     height: 100%;
     width: 45%;
     font-size: 1.8rem;
-    padding: 1rem;
+    padding: 1.5rem;
     background-color: var(--rosaMedio);
 }
 
 .pt4{
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     height: 100%;
     width: 45%;
     font-size: 1.8rem;
-    padding: 1rem;
+    padding: 1.5rem;
     background-color: var(--roxoClaro);
 }
