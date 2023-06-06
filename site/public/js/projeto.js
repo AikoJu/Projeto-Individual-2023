@@ -39,7 +39,10 @@ function obterProjetos() {
 
 function cadastrarProjeto(){
     var nomeVar = document.getElementById("nomeProjeto").value;
-
+    var mensagem = document.getElementById("idMensagem")
+    if(nomeVar.value = ""){
+        mensagem.innerHTML = "Nome vazio!"
+    }else{
     fetch(`/projetos/cadastrar/${idUsuario}`, {
         method: "POST",
         headers: {
@@ -64,4 +67,5 @@ function cadastrarProjeto(){
     }).catch(function (resposta) {
         console.log(`#ERRO: ${resposta}`);
     });
+}
 }

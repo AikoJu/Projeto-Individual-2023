@@ -137,9 +137,9 @@ header .navbar a:hover{
     display: flex;
     justify-content: center;
     color: var( --rosaEscuro);
-    font-size: 8rem;
+    font-size: 6rem;
     font-style: italic;
-    margin-bottom: 2%;
+    margin-bottom: 1rem;
 }
 
 .introducao p{
@@ -193,7 +193,6 @@ header .navbar a:hover{
     width: 100%;
     height: fit-content;
     display: flex;
-    
 }
 .textoConheca{
     width: 50%;
@@ -215,12 +214,11 @@ header .navbar a:hover{
     align-items: center;
     justify-content: center;
     border-style: dashed;
-    text-align: center;
     border-color: var(--rosaEscuro);
 }
 
 .textoConheca p{
-    display: flex;
+    text-align: center;
     padding: 2rem;
     font-size: 3rem;
     color: #0c0722;
@@ -233,6 +231,10 @@ header .navbar a:hover{
     border-radius: 5px;
     width: 100%;
     box-shadow: 0 .5rem 1rem  rgba(65, 51, 122, .95) ;
+}
+
+.listaTexto{
+    font-size: 2rem;
 }
 
 #grafico{
@@ -248,6 +250,8 @@ header .navbar a:hover{
     border-radius: 8px;
     width: 80%;
     background-color: #41337a;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .3);
+
 }
 
 .containerGrafico{
@@ -277,6 +281,7 @@ header .navbar a:hover{
     justify-content: center;
     background-color: var(--verdeClaro);
     font-size: 3rem;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .3);
 }
 
 
@@ -312,6 +317,7 @@ header .navbar a:hover{
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
     background-color: var(--roxoClaro);
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .3);
 }
 
 .exemplo1 img{
@@ -326,6 +332,7 @@ header .navbar a:hover{
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
     background-color:var(--verdeClaro);
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .3);
 }
 
 .exemplo2 img{
@@ -339,6 +346,7 @@ header .navbar a:hover{
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
     background-color:var(--rosaEscuro);
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .3);
     
 }
 
@@ -371,44 +379,126 @@ width: 50%;
     height: fit-content;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 .containerDiferenca{
+    width: 100%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     padding: 2rem;
 }
 
 #diferenca img{
-    width: 100rem;
+    width: 70rem;
 }
 
-.titulo{
-    font-family: 'Comfortaa';
-    font-size: 5rem;
-    text-align: center;
-}
 
 .diferencaTexto{
     width: 100%;
     display: flex;
     flex-direction: column;
     padding: 2.5rem;
-    
-}
-
-.diferencaTexto p{
-    font-size: 2.7rem;
     text-align: center;
-    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    
 }
 
 .diferencaTexto img{
     width: 2rem;
 }
+
+.listaTexto{
+    width: 100;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    gap:1rem ;
+    margin-bottom: 2rem;
+}
+
+.listaTexto .p1 {
+    padding: 1rem;
+    font-size: 1.7rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .3);
+    background-color:#f590b0;
+    transition: transform 0.3s ease;
+}
+.listaTexto .p1:hover{
+    transform: scale(1.1);
+}
+
+.listaTexto .p2 {
+    padding: 1rem;
+    font-size: 1.7rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .3);
+    background-color:var(--rosaEscuro);
+    transition: transform 0.3s ease;
+}
+.listaTexto .p2:hover{
+    transform: scale(1.1);
+}
+
+.listaTexto .p3 {
+    padding: 1rem;
+    font-size: 1.7rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .3);
+    background-color: var(--roxo);
+    transition: transform 0.3s ease;
+}
+.listaTexto .p3:hover{
+    transform: scale(1.1);
+}
+
+.listaTexto .p4 {
+    padding: 1rem;
+    font-size: 1.7rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .3);
+    background-color: var(--roxoClaro);
+    transition: transform 0.3s ease;
+}
+.listaTexto .p4:hover{
+    transform: scale(1.1);
+}
+
+.listaTexto .p5 {
+    padding: 1rem;
+    font-size: 1.7rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .3);
+    background-color: var(--verde);
+    transition: transform 0.3s ease;
+}
+.listaTexto .p5:hover{
+    transform: scale(1.1);
+}
+
+
 
 
 /* sobre mim */
