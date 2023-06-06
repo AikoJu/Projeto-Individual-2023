@@ -1,7 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+
+:root{
+    --rosa: #fdedf2;
+    --rosaEscuro: #a74967;
+    --roxo: #41337a;
+    --verdeClaro:#91D9E2 ;
+    --verde:#43919c;
+    --roxoClaro:#9C95DC;
+    --rosaMedio:#f590b0;
+}
+
+
 .introducaoTutorial{
     display: flex;
     justify-content: center;
     text-align: center;
     width: 100%;
+    font-size: 3rem;
+}
+
+.containerMaterial{
+    width: 100%;
+    height: fit-content;
+    padding: 3rem;
+}
+
+
+.materiais{
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+}
+
+.materiais span{
+    text-align: center;
+    width: 25%;
+    padding: 1rem;
     font-size: 2rem;
+}
+
+.materiais p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+    text-align: center;
+    height: 100%;
+    border-radius: 10px;
+    padding: 2rem;
+    font-size: 2rem;
+    background-color: #e98fac ;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .3);
+    transition: transform 0.3s ease;
+}
+
+.materiais p:hover{
+    transform: scale(1.1);
+}
+
+.materiais img{
+    width:80% ;
+    border-radius: 8px;
+}
+
+.pontosContainer{
+    margin-top: 2rem;
+    width: 100%;
+    height: fit-content;
+}
+.pontos{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.pontosCima{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pontosBaixo{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pt1{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 45%;
+    font-size: 1.8rem;
+    padding: 1rem;
+    background-color: var(--verdeClaro);
+}
+
+.pt2{
+    height: 100%;
+    width: 45%;
+    font-size: 1.8rem;
+    padding: 1rem;
+    background-color: var(--roxo);
+}
+
+.pt3{
+    height: 100%;
+    width: 45%;
+    font-size: 1.8rem;
+    padding: 1rem;
+    background-color: var(--rosaMedio);
+}
+
+.pt4{
+    height: 100%;
+    width: 45%;
+    font-size: 1.8rem;
+    padding: 1rem;
+    background-color: var(--roxoClaro);
 }
