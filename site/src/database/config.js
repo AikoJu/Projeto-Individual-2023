@@ -2,19 +2,19 @@ var mysql = require("mysql2");
 var sql = require('mssql');
 
 
-// var mySqlConfig = {
-//     host: "localhost",
-//     database: "crochetando",
-//     user: "admin",
-//     password: "Bananinha123",
-// };
-
 var mySqlConfig = {
     host: "localhost",
     database: "crochetando",
-    user: "sptech",
-    password: "030204",
+    user: "admin",
+    password: "Bananinha123",
 };
+
+// var mySqlConfig = {
+//     host: "localhost",
+//     database: "crochetando",
+//     user: "sptech",
+//     password: "030204",
+// };
 
 function executar(instrucao) {
     // VERIFICA A VARIÁVEL DE AMBIENTE SETADA EM app.js

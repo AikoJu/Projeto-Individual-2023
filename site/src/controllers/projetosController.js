@@ -116,9 +116,9 @@ function atualizarAtuais(req,res){
 
 function cadastrarReceita(req,res){
     var { idProjeto } = req.params;
-    var {nome, material, pontosUtilizados, passoAPasso } = req.body;
-        
-        projetoModel.cadastrarReceita(idProjeto, nome, material, pontosUtilizados, passoAPasso)
+    var {nome, material, pontosUtilizados, passo } = req.body;
+        console.log(req.body)
+        projetoModel.cadastrarReceita(idProjeto, nome, material, pontosUtilizados, passo)
             .then(
                 function (resultado) {
                     res.json(resultado);

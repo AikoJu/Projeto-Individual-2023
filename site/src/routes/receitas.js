@@ -12,4 +12,8 @@ router.get('/obterReceita/:idUsuario', function(req,res){
     receitaController.obterReceita(req,res);
 })
 
+
+router.get('/obterDadosReceita/:idReceitas', function(req,res){
+    receitaController.obterDadosReceita(req,res);
+})
 module.exports = router;

@@ -1,10 +1,12 @@
 var dadosReceita = []
+var dadosReceitaDados = []
 var receita = document.getElementById("idBodyReceitas")
 var nomeReceita = document.getElementById("nomeReceita");
 var materialReceita = document.getElementById("materialReceita");
 var pontosUtilizar =  document.getElementById("pontosUtilizar");
 var passoAPasso = document.getElementById("passoAPasso");
 var divMensagem2 = document.getElementById("divMensagem2")
+var containerReceita = document.getElementById("receita")
 
 var idUsuario = sessionStorage.ID_USUARIO;
 
@@ -53,7 +55,7 @@ function obterReceita() {
                 dadosReceita = resposta;
 
                 for(var i = 0; i < dadosReceita.length; i++){
-                    receita.innerHTML+=`<a href="receitaArea.html?idReceita=${dadosReceita[i].idReceitas}"><tr><td>${dadosReceita[i].nomeReceita}</td></tr></a>`
+                    receita.innerHTML+=`<tr><td><a href="receitaArea.html?idReceita=${dadosReceita[i].idReceitas}">${dadosReceita[i].nomeReceita}</a></td></tr>`
                 }
 
             })
@@ -67,5 +69,34 @@ function obterReceita() {
     });
 }
 
+function obterDadosReceita(){
+    fetch(`/receitas/obterDadosReceita/${idReceita}`, {
+        method: 'GET'
+    }).then((response) => {
+        if (response.ok) {
 
+            dadosReceitaDados = [];
+
+            response.json().then((resposta) => {
+                dadosReceitaDados = resposta
+                console.log(resposta)   
+                nomeReceita.innerHTML = dadosReceitaDados[0].nomeReceita
+                containerReceita.innerHTML = `<div class=receita>
+                    <p>Material:</p>
+                    <p>${dadosReceitaDados[0].material}</p>
+                    <p>Pontos a serem utilizados:</p>
+                    <p>${dadosReceitaDados[0].pontosUtilizados}</p>
+                    <p>Passo a Passo:</p>
+                    <p>${dadosReceitaDados[0].passoAPasso}</p>
+                </div>`
+            })
+        } else if (response.status == 404) {
+            return alert('Du 404!')
+        } else {
+            throw ("Houve um erro ao tentar buscar os setores: " + response.status);
+        }
+    }).catch((error) => {
+        console.error(error);
+    });
+}
     

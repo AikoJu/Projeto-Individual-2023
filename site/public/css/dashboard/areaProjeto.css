@@ -164,6 +164,7 @@ body{
 }
 
 .formReceita{
+    color: white;
     text-align: center;
 }
 
@@ -199,6 +200,7 @@ body{
 }
 
 table {
+    width: 40%;
     border-radius: 15px;
     box-shadow: -6px 6px 4px #8888;
     font-size: 1.5rem;
@@ -208,10 +210,36 @@ table {
 }
 
 th{
+    width: 40%;
     color: var(--lightBlue);
     padding: 1rem;
 }
 
 tr{
-    border-bottom: var(--lightBlue) solid 2px;
+    width: 40%; 
+}
+
+#receita{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.receita p{
+    font-size: 2rem;
+    font-family: 'Comfortaa';
+}
+
+.receita{
+    background-color: #41337a;
+    border-radius: 15px;
+    height: fit-content;
+    gap: 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }

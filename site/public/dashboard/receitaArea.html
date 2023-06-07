@@ -10,12 +10,12 @@
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
     <title>Crochetando... | Receitas</title>
     <script defer src="../js/funcoes.js"></script>
-    <script defer src="../js/projetoArea.js"></script>
+    <script defer src="../js/receita.js"></script>
     <link rel="stylesheet" href="../css/dashboard/style.css">
     <link rel="stylesheet" href="../css/dashboard/areaProjeto.css">
 </head>
 
-<body onload="{obterDadosProjeto();obterReceita()}">
+<body onload="obterDadosReceita()">
 
   
   <div class="sidenav">
@@ -27,52 +27,13 @@
   </div>
   <div class="container">
         <div class="boasVindas">
-          <p><span id="nomeProjeto">projeto</span><button class="btnDeletar" onclick="apagarProjeto()">Apagar Projeto</button></p>
+          <p><span id="nomeReceita">receita</span></p>
           </div>
-          
-          <div id="containerProjetoArea">
+          <div id="receita">
             
-        <div class="contador">
-          <span class="text"> Contador de pontos e carreiras!</span>
-           <div class="carreiraEPonto">
-              Quantidade de carreiras:
-              <input id="carreiraInput" type="number" min="1">
-              Quantidade de pontos na carreira:
-              <input id="pontosInput" type="number" min="1">
-              <button onclick="salvar()"><span class="iconify" data-icon="akar-icons:plus" data-width="30" data-height="30"></span></button>
-           </div>
-           <div id="carreiraEPontoAtual">
-            Carreira Atual:
-            <span id="carreiraAtual">1</span>
-            Ponto Atual:
-            <span id="pontoAtual">1</span>
-            <div class="botaoContador">
-            <button onclick="atualizarPontoSubtrair()"><span class="iconify" data-icon="akar-icons:minus" data-width="30" data-height="30"></span></button>
-            <button onclick="atualizarPontoSomar()"><span class="iconify" data-icon="akar-icons:plus" data-width="30" data-height="30"></span></button>
-          </div>   
           </div>
-          <div id="divMensagem"></div>
-          <button class="btnSalvar" onclick="salvarAtuais()">Salvar carreira e ponto atual</button>
-        </div>
-
-        <div class="receitaProjeto">
-          <div id="containerReceita">
-            <span class="text"> Cadastre a receita do projeto!</span>
-            <div class="cadastrarReceita">
-              <p class="formReceita">Nome:</p>
-              <input type="text" id="nomeReceita">
-              <p class="formReceita">Material:</p>
-              <input type="text" id="materialReceita">
-              <p class="formReceita">Pontos a utilizar:</p>
-              <input type="text" id="pontosUtilizar">
-              <p>Passo a Passo: </p>
-              <textarea id="passoAPasso" maxlength="2000" rows="6">.</textarea>
-              <button class="btnSalvar" onclick="cadastrarReceita()"><span class="iconify" data-icon="akar-icons:plus" data-width="30" data-height="30"></span></button> <div id="divMensagem2"></div>
-            </div>
           </div>
-      </div>
         </div>
-    
       </div>
 
     </body>

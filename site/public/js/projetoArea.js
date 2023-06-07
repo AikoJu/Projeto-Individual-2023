@@ -175,6 +175,7 @@ function salvarAtuais(){
         if(nomeReceita.value == "" || materialReceita.value == "" || pontosUtilizar.value == "" ||  passoAPasso.value == ""){
             divMensagem2.innerHTML = "Campos vazios!"
         }else{
+            console.log(passoAPasso.value)
         fetch(`/projetos/cadastrarReceita/${idProjeto}`, {
             method: "POST",
             headers: {

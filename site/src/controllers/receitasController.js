@@ -2,9 +2,9 @@ var receitaModel = require("../models/receitaModel.js");
 
 function cadastrarReceita(req,res){
     var { idUsuario } = req.params;
-    var {nome, material, pontosUtilizados, passoAPasso } = req.body;
+    var {nome, material, pontosUtilizados, passo } = req.body;
         
-        receitaModel.cadastrarReceita(idUsuario, nome, material, pontosUtilizados, passoAPasso)
+        receitaModel.cadastrarReceita(idUsuario, nome, material, pontosUtilizados, passo)
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -41,7 +41,28 @@ function cadastrarReceita(req,res){
         );
     }
 
+    function obterDadosReceita(req,res){
+        var {idReceitas } = req.params;
+        receitaModel.obterDadosReceita(idReceitas)
+        .then(function (resultado) {
+            if (resultado.length > 0) {
+                console.log(resultado)
+                res.status(200).json(resultado);
+            } else {
+                console.log(resultado)
+                res.status(204).send("Nenhum resultado encontrado!")
+            }
+        }).catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+    }
+
     module.exports = {
         cadastrarReceita,
-        obterReceita
+        obterReceita,
+        obterDadosReceita
     }
