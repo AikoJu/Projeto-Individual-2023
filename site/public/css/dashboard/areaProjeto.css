@@ -41,7 +41,7 @@ body{
     display: flex;
     width: 100%;
     height: 100%;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 1rem;
 }
 
@@ -49,6 +49,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
    margin-left: 12%;
    height: 100%;
    width: 50%;
@@ -68,6 +69,7 @@ body{
    background-color: var(--rosaEscuro); 
    font-size: 2rem;
    border-radius: 8px;
+   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .3);
 }
 
 .carreiraEPonto input{
@@ -103,6 +105,7 @@ body{
    background-color: var(--verdeClaro); 
    font-size: 2rem;
    border-radius: 8px;
+   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .3);
 }
 
 #carreiraEPontoAtual button{
@@ -135,6 +138,7 @@ body{
     border-radius :8px ;
     cursor: pointer;
     background-color: #43919c;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .3);
 }
 .btnSalvar:hover{
     background-color: var(--rosaEscuro);
@@ -143,8 +147,71 @@ body{
 
 .receitaProjeto{
     width: 50%;
+    height: 100%;
 }
 
 .cadastrarReceita{
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    padding: 2rem;
+    height: fit-content;
     background-color: #a74967;
+    margin-right: 4rem;
+    gap: 3rem;
+    border-radius: 10px;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .3);;
+}
+
+.formReceita{
+    text-align: center;
+}
+
+.cadastrarReceita input{
+    font-size: 3rem;
+    
+}
+
+#passoAPasso{
+    height: 30rem;
+    
+}
+
+.btnDeletar{
+    font-family: 'Comfortaa';
+    padding: 2rem;
+   margin-left: 25rem;
+    font-size: 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(136, 51, 51);
+    color: white;
+}
+.text{
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+
+.containerReceitas{
+    display: flex;
+    padding: 1.5rem;
+}
+
+table {
+    border-radius: 15px;
+    box-shadow: -6px 6px 4px #8888;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: rgb(248, 248, 248);
+}
+
+th{
+    color: var(--lightBlue);
+    padding: 1rem;
+}
+
+tr{
+    border-bottom: var(--lightBlue) solid 2px;
 }

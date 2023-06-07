@@ -5,8 +5,6 @@ var projetosListados = []
 
 
 function obterProjetos() {
-    
-
     fetch(`/projetos/listar/${idUsuario}`, {
         method: 'GET'
     }).then((response) => {
@@ -18,7 +16,7 @@ function obterProjetos() {
                 projetosListados = resposta;
 
                 for(var i = 0; i < projetosListados.length; i++){
-                    projetos.innerHTML+=`<a href="projetoArea.html?idProjeto=${projetosListados[i].idProjeto}"><div class="cards">
+                    projetos.innerHTML+=`<a href="projetoArea.html?idProjeto=${projetosListados[i].idProjeto}"> <div class="cards">
                     <p>Projeto:</p>
                     ${projetosListados[i].nomeProjeto}
                    </div></a>`
@@ -69,3 +67,5 @@ function cadastrarProjeto(){
     });
 }
 }
+
+

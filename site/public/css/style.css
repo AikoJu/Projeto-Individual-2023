@@ -530,6 +530,25 @@ width: 50%;
     width:50rem;
   }
 
+.galeriaFotos{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1rem;
+    justify-content: space-evenly;
+    gap: 2rem; 
+
+}
+
+.imagem{
+    font-size: 2rem;
+    padding: 1rem;
+background-color: white;
+}
+.imagem img{
+    width: 40rem;
+}
+
 /* footer */
 footer {
     width: 100%;

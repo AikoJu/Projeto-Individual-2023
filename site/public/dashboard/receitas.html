@@ -12,6 +12,7 @@
     <script defer src="../js/funcoes.js"></script>
     <script defer src="../js/receita.js"></script>
     <link rel="stylesheet" href="../css/dashboard/style.css">
+    <link rel="stylesheet" href="../css/dashboard/areaProjeto.css">
 </head>
 
 <body onload="validarSessao(), obterReceita()">
@@ -31,16 +32,35 @@
           <div class="introducao">
             <p> Aqui você pode salvar suas receitas!</p> 
           </div>
-          <div id="containerProjeto">
-            <div class="cadastroReceita">
-              Adicionar nova receita! 
-              <p>Nome da Receita:</p>
-              <input type="text" id="nomeReceita">
-              <p></p>
-              <button onclick="cadastrarProjeto()"><span class="iconify" data-icon="akar-icons:plus" data-width="30" data-height="30"></span></button>
-            </div>
+          <div class="containerReceitas">
+            <div class="receitaProjeto">
+              <div id="containerReceita">
+                <span class="text"></span>
+                <div class="cadastrarReceita">
+                  <p class="formReceita">Nome:</p>
+                  <input type="text" id="nomeReceita">
+                  <p class="formReceita">Material:</p>
+                  <input type="text" id="materialReceita">
+                  <p class="formReceita">Pontos a utilizar:</p>
+                  <input type="text" id="pontosUtilizar">
+                  <p>Passo a Passo: </p>
+                  <input id="passoAPasso"></input>
+                  <button class="btnSalvar" onclick="cadastrarReceita()"><span class="iconify" data-icon="akar-icons:plus" data-width="30" data-height="30"></span></button> <div id="divMensagem2"></div>
+                </div>
+              </div>
+          </div>
+          <div id="containerLista">
+            <table>
+              <thead>
+                  <tr>
+                      <th>Nome</th>
+                  </tr>
+              </thead>
+              <tbody id="idBodyReceitas"></tbody>
+          </table>
+          </div>
              
-    
+        </div>
           </div>
       
 

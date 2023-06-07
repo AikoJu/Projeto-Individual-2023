@@ -95,11 +95,75 @@ function atualizarAtuais(req,res){
             );
     }
 
-   
+    function apagarProjeto(req,res){
+        var {idProjeto} = req.params;
+        console.log(idProjeto)
+
+        projetoModel.apagarProjeto(idProjeto)
+            .then(
+                function(resultado){
+                    res.json(resultado);
+                }
+            ).catch(
+                function(erro){
+                        console.log(erro);
+                        console.log("Houve um erro ao deletar o post: ", erro.sqlMessage);
+                        res.status(500).json(erro.sqlMessage);
+                    
+                }
+    )
+}
+
+function cadastrarReceita(req,res){
+    var { idProjeto } = req.params;
+    var {nome, material, pontosUtilizados, passoAPasso } = req.body;
+        
+        projetoModel.cadastrarReceita(idProjeto, nome, material, pontosUtilizados, passoAPasso)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+    function obterReceita(req,res){
+        var { idProjeto } = req.params
+        projetoModel.obterReceita(idProjeto)
+            .then(function (resultado) {
+                if (resultado.length > 0) {
+                    console.log(resultado)
+                    res.status(200).json(resultado);
+                } else {
+                    console.log(resultado)
+                    res.status(204).send("Nenhum resultado encontrado!")
+                }
+            }).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    
+    }
+
+
+
 
 module.exports = {
     cadastrar,
     listar,
     atualizarAtuais,
-    obterDadosProjeto
+    obterDadosProjeto,
+    apagarProjeto,
+    cadastrarReceita,
+    obterReceita
 }

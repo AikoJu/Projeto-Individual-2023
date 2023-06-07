@@ -13,10 +13,20 @@ var valorSpanCarreira = Number(carreiraAtual.textContent);
 var valorSpanPonto = Number(pontoAtual.textContent);
 
 var idProjeto = Number(window.location.search.replace('?idProjeto=', ''));
-var nomeProjetoDoProjeto = sessionStorage.NOME_PROJETO;
+
+var nomeReceita = document.getElementById("nomeReceita");
+var materialReceita = document.getElementById("materialReceita");
+var pontosUtilizar =  document.getElementById("pontosUtilizar");
+var passoAPasso = document.getElementById("passoAPasso")
+var divMensagem2 = document.getElementById("divMensagem2")
+
+var containerReceita = document.getElementById("containerReceita")
+ 
+
 
 var projeto = []
 var dadosProjeto = []
+var dadosReceita = []
 
 
 function obterDadosProjeto(){
@@ -27,8 +37,10 @@ function obterDadosProjeto(){
             dadosProjeto = [];
             response.json().then((resposta) => {
                 dadosProjeto = resposta;
+                nomeProjeto.innerHTML = dadosProjeto[0].nomeProjeto
                 if(dadosProjeto[0].pontos != null && dadosProjeto[0].carreira != null && dadosProjeto[0].pontosAtual != null && dadosProjeto[0].carreiraAtual != null ){
                    contador.style.display = "flex"
+                   
                    exibirAntigo()   
                 }
 
@@ -125,7 +137,7 @@ function salvarAtuais(){
         }).then(function (resposta) {
 
             if (resposta.ok) {
-                mensagem.innerHTML= "Salvado!"
+                mensagem.innerHTML= "Salvo!"
             } else if (resposta.status == 404) {
                 window.alert("Deu 404!");
             } else {
@@ -137,6 +149,77 @@ function salvarAtuais(){
         });
     }
     
+    function apagarProjeto(){
+        fetch(`/projetos/apagarProjeto/${idProjeto}`,{
+            method: "DELETE",
+            headers: {
+                "Content-Type":"application/json"
+            }
+        }).then(function(resposta){
+            if(resposta.ok){
+                window.location = "projetos.html"
+                console.log("resposta: ", resposta);
+            }else if(resposta.status == 404){
+                window.alert("Deu 404!")
+            }else {
+                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+    }
 
+
+
+    function cadastrarReceita(){
+        if(nomeReceita.value == "" || materialReceita.value == "" || pontosUtilizar.value == "" ||  passoAPasso.value == ""){
+            divMensagem2.innerHTML = "Campos vazios!"
+        }else{
+        fetch(`/projetos/cadastrarReceita/${idProjeto}`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                nome: nomeReceita.value,
+                material: materialReceita.value,
+                pontosUtilizados: pontosUtilizar.value,
+                passo: passoAPasso.value
+            })
+        }).then(function (resposta) {
+
+            if (resposta.ok) {
+                mensagem.innerHTML= "Salvo!"
+            } else if (resposta.status == 404) {
+                window.alert("Deu 404!");
+            } else {
+                console.log(resposta)
+                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+    }
+    }
+
+        function obterReceita(){
+            fetch(`/projetos/obterReceita/${idProjeto}`, {
+                method: 'GET'
+            }).then((response) => {
+                if (response.ok) {
+                    dadosReceita = [];
+                    response.json().then((resposta) => {
+                        dadosReceita = resposta;
+                        console.log(resposta)
         
-
+                    })
+                } else if (response.status == 404) {
+                    return alert('Deu 404!')
+                } else {
+                    throw ("Houve um erro ao tentar buscar os setores: " + response.status);
+                }
+            }).catch((error) => {
+                console.error(error);
+            });
+        
+    }
